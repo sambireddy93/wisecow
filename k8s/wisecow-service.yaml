@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wisecow-svc
+spec:
+  selector:
+    app: wisecow
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 4499
+    nodePort: 30099
+    protocol: TCP
